@@ -1,0 +1,7 @@
+name: redisearch-performance-analytics-py
+version: 0.0.1
+description": LaFleet - Analytics
+homepage: https://github.com/Ducharme/redisearch-performance-analytics-py
+keywords: aws, iot, lafleet
+author: Claude Ducharme
+license: MIT

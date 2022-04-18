@@ -1,0 +1,27 @@
+FROM python:3.10.2-alpine3.15
+
+# set the working directory in the container
+WORKDIR /home/user
+
+# Create wheel for numpy otherwise there will be an error with alpine images
+# [Errno 2] No such file or directory: 'gcc' // ERROR: Failed building wheel for numpy
+# ERROR: Could not build wheels for numpy which use PEP 517 and cannot be installed directly
+RUN apk add --no-cache --update
+RUN apk add make gcc g++ python3-dev
+
+# copy the dependencies file to the working directory
+COPY requirements.txt .
+
+# install dependencies
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+#RUN apk --purge del make gcc g++ python3-dev
+
+EXPOSE 5972
+
+# copy the content of the local src directory to the working directory
+COPY *.py ./
+
+# command to run on container start #CMD ["sh"]
+ENV DEBUG True
+CMD [ "python3", "./main.py" ]
