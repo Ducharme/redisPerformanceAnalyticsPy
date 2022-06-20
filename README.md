@@ -59,12 +59,12 @@ curl -X POST -H "Content-Type: text/html" http://127.0.0.1:5000/devices/stats
 # Play with docker locally
 
 ```
-docker build --tag redis-performance-analitycs-py:v0.01 .
-sudo docker run -it -p 5972:5972 redis-performance-analitycs-py:v0.01
+docker build --tag redis-performance-analytics-py:v0.01 .
+sudo docker run -it -p 5972:5972 redis-performance-analytics-py:v0.01
 curl -X GET -H "Content-Type: text/html" http://127.0.0.1:5972/
 sudo docker logs da29d22cb82d
 
-sudo docker run -it -p 5973:5973 redis-performance-analitycs-py:v0.01
+sudo docker run -it -p 5973:5973 redis-performance-analytics-py:v0.01
 ```
 
 ## Playing around

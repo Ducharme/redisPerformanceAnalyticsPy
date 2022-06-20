@@ -1,1 +1,1 @@
-sudo docker build -t redis-performance-analitycs-py .
+sudo docker build -t redis-performance-analytics-py .
