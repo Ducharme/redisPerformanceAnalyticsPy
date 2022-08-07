@@ -31,8 +31,8 @@ class StorageHelper():
 
         arr = []
         for bkey in r.scan_iter():
-            # "STREAMDEV:test-299212:topic_1"
-            # "DEVLOC:test-299212:topic_1"
+            # "STREAMDEV:test-299212:lafleet/devices/location/+/streaming"
+            # "DEVLOC:test-299212:lafleet/devices/location/+/streaming"
             key = bkey.decode("utf-8")
             arr.append(key)
 

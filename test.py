@@ -3,7 +3,7 @@ import numpy as np
 #list indices must be integers or slices, not tuple
 
 deviceId = 'test-36817591'
-topic = 'topic_1'
+topic = 'lafleet/devices/location/+/streaming'
 
 streamArr = [
   #[dts, sts, wts, rts, seq]
