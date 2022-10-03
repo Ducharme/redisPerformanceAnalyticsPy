@@ -88,10 +88,10 @@ root@72c388dc2cb8:/data# redis-cli
 
 # Statistics in plain text (example)
   
-td_dev_srv: Time Device to IoT Core
-td_srv_wrk: IoT Core to Worker
-td_wrk_db: Worker to Redisearch
-td_dev_db: Device to Redisearch (total)
+- td_dev_srv: Time Device to IoT Core  
+- td_srv_wrk: IoT Core to Worker  
+- td_wrk_db: Worker to Redisearch  
+- td_dev_db: Device to Redisearch (total)  
 
 ```
 Start time 2022-04-12 21:29:55.039000 and end 2022-04-12 21:32:25.340000
