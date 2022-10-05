@@ -3,11 +3,11 @@
 
 [OpenAPI redisPerformanceAnalyticsPy](https://app.swaggerhub.com/apis/LaFleet/redisPerformanceAnalyticsPy/0.1)
 
-* DELETE devices
+* GET /
+* GET /health
 * POST devices/stats
 * POST devices/data
-* GET /health
-* GET /
+* DELETE devices
 
   
 # Install the app
