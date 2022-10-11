@@ -31,7 +31,7 @@ class StorageHelper():
 
         arr = []
         for bkey in r.scan_iter():
-            # "STREAMDEV:test-299212:lafleet/devices/location/+/streaming"
+            # "STREAMDEV:test-299212:lafleet/devices/location/+/streaming:1" where 1 is streamId
             # "DEVLOC:test-299212:lafleet/devices/location/+/streaming"
             key = bkey.decode("utf-8")
             arr.append(key)
@@ -41,10 +41,23 @@ class StorageHelper():
     @staticmethod
     def getStreamsKey():
         keys = StorageHelper.getAllKeys('STREAMDEV:')
-        arr = []
+
+        # Getting the last stream only
+        dic = {}
         for key in keys:
-            if key.startswith('STREAMDEV:') and key.count(':') == 2:
-                arr.append(key)
+            if key.startswith('STREAMDEV:') and key.count(':') == 3:
+                tokens = key.split(':')
+                root = tokens[0] + ':' + tokens[1] + ':' + tokens[2]
+                item = dic.get(root)
+                index = int(tokens[3])
+                if item == None:
+                    dic[root] = index
+                elif index > item:
+                    dic[root] = index
+
+        arr = []
+        for item in dic.items():
+            arr.append(item[0] + ':' + str(item[1]))
 
         return arr
 
