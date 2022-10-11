@@ -1,12 +1,15 @@
 
 # Endpoints
 
-* DELETE devices
-* GET devices/stats
-* GET devices/ids
-* GET devices/<id>/location (last location)
-* GET devices/<id>/stream
+[OpenAPI redisPerformanceAnalyticsPy](https://app.swaggerhub.com/apis/LaFleet/redisPerformanceAnalyticsPy/0.1)
 
+* GET /
+* GET /health
+* POST devices/stats
+* POST devices/data
+* DELETE devices
+
+  
 # Install the app
 
 [How do I create a Python 3 virtual environment with the Boto 3 library on Amazon Linux 2?](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-python3-boto3/)
