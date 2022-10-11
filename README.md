@@ -62,19 +62,19 @@ curl -X POST -H "Content-Type: text/html" http://127.0.0.1:5000/devices/stats
 # Play with docker locally
 
 ```
-docker build --tag redis-performance-analytics-py:v0.01 .
-sudo docker run -it -p 5972:5972 redis-performance-analytics-py:v0.01
+docker build --tag redis-performance-analytics-py:v0.02 .
+sudo docker run -it -p 5972:5972 redis-performance-analytics-py:v0.02
 curl -X GET -H "Content-Type: text/html" http://127.0.0.1:5972/
 sudo docker logs da29d22cb82d
 
-sudo docker run -it -p 5973:5973 redis-performance-analytics-py:v0.01
+sudo docker run -it -p 5973:5973 redis-performance-analytics-py:v0.02
 ```
 
 ## Playing around
 
 ```
 npm start --idle true
-docker run --env IDLE=true -t mock-iot-gps-device-awsskdv2:v0.01
+docker run --env IDLE=true -t mock-iot-gps-device-awsskdv2:v0.02
 docker run --detach --rm --env IDLE=true
 ```
 
