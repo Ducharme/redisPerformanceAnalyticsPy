@@ -251,8 +251,8 @@ class PerformanceStatistics:
 
     @staticmethod
     def getDataAsJson():
-        summary, data = PerformanceStatistics.getStats()
-        return data
+        _, dataAll, _, _ = PerformanceStatistics.getStats()
+        return dataAll
 
     @staticmethod
     def getStatsAsJson():
